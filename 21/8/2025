@@ -1,0 +1,185 @@
+{
+  "nbformat": 4,
+  "nbformat_minor": 0,
+  "metadata": {
+    "colab": {
+      "provenance": [],
+      "authorship_tag": "ABX9TyMLgSluxjkfmfBSPZNIgc26",
+      "include_colab_link": true
+    },
+    "kernelspec": {
+      "name": "python3",
+      "display_name": "Python 3"
+    },
+    "language_info": {
+      "name": "python"
+    }
+  },
+  "cells": [
+    {
+      "cell_type": "markdown",
+      "metadata": {
+        "id": "view-in-github",
+        "colab_type": "text"
+      },
+      "source": [
+        "<a href=\"https://colab.research.google.com/github/parakalaAshwija/Batch11/blob/main/21/8/2025\" target=\"_parent\"><img src=\"https://colab.research.google.com/assets/colab-badge.svg\" alt=\"Open In Colab\"/></a>"
+      ]
+    },
+    {
+      "cell_type": "code",
+      "execution_count": 1,
+      "metadata": {
+        "colab": {
+          "base_uri": "https://localhost:8080/"
+        },
+        "id": "nWymC53rC4gG",
+        "outputId": "59b7e0b9-c1f4-4fa1-f9c6-dab9db3a3ecc"
+      },
+      "outputs": [
+        {
+          "output_type": "stream",
+          "name": "stdout",
+          "text": [
+            "['cherry', 13, 29, 'Hello', True]\n"
+          ]
+        }
+      ],
+      "source": [
+        "list=[\"cherry\",13,29,\"Hello\",True]\n",
+        "print(list)"
+      ]
+    },
+    {
+      "cell_type": "code",
+      "source": [
+        "dict={\"name\":\"Chaitra\", \"age\":16, \"city\":\"Shanigaram\"}\n",
+        "print(dict)"
+      ],
+      "metadata": {
+        "colab": {
+          "base_uri": "https://localhost:8080/"
+        },
+        "id": "CVBt4--IESaI",
+        "outputId": "75fe3393-138e-4b5a-d85d-8c5649dc3a9a"
+      },
+      "execution_count": 2,
+      "outputs": [
+        {
+          "output_type": "stream",
+          "name": "stdout",
+          "text": [
+            "{'name': 'Chaitra', 'age': 16, 'city': 'Shanigaram'}\n"
+          ]
+        }
+      ]
+    },
+    {
+      "cell_type": "code",
+      "source": [
+        "import pandas as pd\n",
+        "data={\"name\":[\"Anju\",\"Ashu\",\"Suma\",\"Vyshu\",\"Bindhu\",\"Ammu\"],\"age\":[19,20,18,21,19,17],\"city\":[\"New york\",\"Hanamkonda\",\"Shanigaram\",\"Warangal\",\"London\",\"Paris\"]}\n",
+        "df=pd.DataFrame(data)\n",
+        "print(df)\n",
+        "df.to_csv(\"input.csv\")"
+      ],
+      "metadata": {
+        "colab": {
+          "base_uri": "https://localhost:8080/"
+        },
+        "id": "TTjkXt2_FMDA",
+        "outputId": "ce65f954-22ab-4509-d73e-5a4e80c28d62"
+      },
+      "execution_count": 5,
+      "outputs": [
+        {
+          "output_type": "stream",
+          "name": "stdout",
+          "text": [
+            "     name  age        city\n",
+            "0    Anju   19    New york\n",
+            "1    Ashu   20  Hanamkonda\n",
+            "2    Suma   18  Shanigaram\n",
+            "3   Vyshu   21    Warangal\n",
+            "4  Bindhu   19      London\n",
+            "5    Ammu   17       Paris\n"
+          ]
+        }
+      ]
+    },
+    {
+      "cell_type": "code",
+      "source": [
+        "import pandas as pd\n",
+        "data1={\"name\":[\"Anju\",\"Ashu\",\"Suma\",\"Vyshu\",\"Bindhu\",\"Ammu\"],\"age\":[19,20,18,21,19,17],\"city\":[\"New york\",\"Hanamkonda\",\"Shanigaram\",\"Warangal\",\"London\",\"Paris\"]}\n",
+        "df1=pd.DataFrame(data)\n",
+        "print(df)\n",
+        "df.to_csv(\"input.csv\")"
+      ],
+      "metadata": {
+        "colab": {
+          "base_uri": "https://localhost:8080/"
+        },
+        "id": "uWG9-wSBL8S8",
+        "outputId": "57d1f702-c386-48c5-9aee-ec6e63872733"
+      },
+      "execution_count": 7,
+      "outputs": [
+        {
+          "output_type": "stream",
+          "name": "stdout",
+          "text": [
+            "     name  age        city\n",
+            "0    Anju   19    New york\n",
+            "1    Ashu   20  Hanamkonda\n",
+            "2    Suma   18  Shanigaram\n",
+            "3   Vyshu   21    Warangal\n",
+            "4  Bindhu   19      London\n",
+            "5    Ammu   17       Paris\n"
+          ]
+        }
+      ]
+    },
+    {
+      "cell_type": "code",
+      "source": [
+        "merge_df=pd.concat([df,df1],axis=1)\n",
+        "print(merge_df)"
+      ],
+      "metadata": {
+        "colab": {
+          "base_uri": "https://localhost:8080/"
+        },
+        "id": "0vjTOyaqMYuZ",
+        "outputId": "d97ef6e5-e724-4bd0-a6eb-34a17a691160"
+      },
+      "execution_count": 8,
+      "outputs": [
+        {
+          "output_type": "stream",
+          "name": "stdout",
+          "text": [
+            "     name  age        city    name  age        city\n",
+            "0    Anju   19    New york    Anju   19    New york\n",
+            "1    Ashu   20  Hanamkonda    Ashu   20  Hanamkonda\n",
+            "2    Suma   18  Shanigaram    Suma   18  Shanigaram\n",
+            "3   Vyshu   21    Warangal   Vyshu   21    Warangal\n",
+            "4  Bindhu   19      London  Bindhu   19      London\n",
+            "5    Ammu   17       Paris    Ammu   17       Paris\n"
+          ]
+        }
+      ]
+    },
+    {
+      "cell_type": "code",
+      "source": [
+        "\n"
+      ],
+      "metadata": {
+        "id": "Q1UYiK3kNhRu"
+      },
+      "execution_count": null,
+      "outputs": []
+    }
+  ]
+}
